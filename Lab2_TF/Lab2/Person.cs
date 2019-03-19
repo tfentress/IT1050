@@ -7,13 +7,11 @@ namespace Lab2
         public string FirstName;
         public string LastName;
         public int Age;
-        public double AverageAges;
         public Person Spouse;
         public bool isMarried;
         public string isMarriedString;
         public static double SumofAllAges;         
-        public static int AverageAge { get; private set; }
-       
+               
         public string GetFullName()
         {
             return this.FirstName + " " + this.LastName;
