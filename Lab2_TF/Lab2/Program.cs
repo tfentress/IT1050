@@ -29,12 +29,7 @@ namespace Lab2
             firstPerson.Spouse.Spouse = firstPerson;
 
             firstPerson.PrintNameAndAge();
-            firstPerson.Spouse.PrintNameAndAge();
-
-            // Sum of Person 2 and Spouse Age
-
-            Person.SumofAllAges = firstPerson.Age + firstPerson.Spouse.Age;
-
+            firstPerson.Spouse.PrintSpouseNameAndAge();
 
             // Person 2 information
 
@@ -58,15 +53,12 @@ namespace Lab2
             secondPerson.Spouse.Age = int.Parse(System.Console.ReadLine());
             secondPerson.Spouse.Spouse = secondPerson;
 
-            // Sum of Person 2 and Spouse Age
-
-            Person.SumofAllAges = secondPerson.Age + secondPerson.Spouse.Age;
-
-
-            secondPerson.PrintNameAndAge();
-            secondPerson.Spouse.PrintNameAndAge();
-
            
+            secondPerson.PrintNameAndAge();
+            secondPerson.Spouse.PrintSpouseNameAndAge();
+
+            Person.PrintPersonCountAndAverageAge();
+
             System.Console.WriteLine("Press any key to continue...");
             System.Console.ReadLine();
            }
