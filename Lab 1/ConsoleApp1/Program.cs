@@ -42,9 +42,14 @@ namespace ConsoleApp1
             System.Console.Write("Nice to meet you " + fullName + "; what is your age, friend?");
             age = int.Parse(System.Console.ReadLine());
             System.Console.Write("Are you a US citizen?");
-            isCitizen = bool.Parse(System.Console.ReadLine());
-            isCitizen = true || false;
-            canVote = isCitizen && age >= 18;
+            string isCitizenString = System.Console.ReadLine().ToLower();
+            bool yesCitizen = isCitizenString.Contains("y");
+            canVote = yesCitizen && age >= 18;
+
+            bool noCitizen = isCitizenString.Contains("n");
+            System.Console.WriteLine("Press any key to continue...");
+            System.Console.ReadLine();
+
 
             System.Console.WriteLine(fullName);
             System.Console.WriteLine(totalHeightCM);

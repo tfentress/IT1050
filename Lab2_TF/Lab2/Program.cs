@@ -41,6 +41,7 @@ namespace Lab2
             System.Console.WriteLine("Please enter your age: ");
             secondPerson.Age = int.Parse(System.Console.ReadLine());
             secondPerson.Spouse = new Person();
+            
 
             // Person 2 Martial Status and information
 
