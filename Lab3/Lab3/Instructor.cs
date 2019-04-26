@@ -36,8 +36,8 @@ namespace Lab3
 
         public void PrintNameAndCourseName()
         {
-            System.Console.WriteLine("My name is " + this.GetProfessorFullName() + ".");
-            System.Console.WriteLine("I teach  " + this.CourseName);
+            System.Console.WriteLine("My name is " + this.GetProfessorFullName() + " ");
+            System.Console.WriteLine("I teach : " + this.CourseName);
         }
     }
 
