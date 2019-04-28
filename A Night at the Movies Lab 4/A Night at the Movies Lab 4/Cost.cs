@@ -13,6 +13,9 @@ namespace A_Night_at_the_Movies_Lab_4
         public static double TotalCandyPrice;
         public static double TotaleveningPrice;
         public static double TotalmatineePrice;
+        public static double TotalTicketPrice;
+        public static double TotalConcession;
+
         //Tickets
 
         const double AdultMatinee = 5.99;
@@ -30,19 +33,25 @@ namespace A_Night_at_the_Movies_Lab_4
         const double SweetPopCorn = 4.50;
         const double OneKindCandy = 1.99;
 
-        public double TotalConcessionPrice()
+        public double SumOfDiscounts()
         {
-            return TotalsmallSodaPrice + TotalLargeSodaPrice + TotalPopCornPrice + TotalHotDogPrice + TotalCandyPrice;
+            double discount1 = 0; double discount2 = 0; double discount3 = 0;
+            double totalDiscount;
+            totalDiscount = discount1 + discount2 + discount3;
+            return totalDiscount;
         }
-
-        public double TotalTicketPrice()
+        public double TotalOfAll()
         {
-            return TotaleveningPrice + TotalmatineePrice;
+            double TotalPrice;
+            TotalPrice = TotalTicketPrice += TotalConcession -= TotalDiscounts;
+            return TotalPrice;
         }
-
-        public static void TotalPrice(double Price)
+        public void PrintTotalPrice()
         {
-
+            System.Console.WriteLine((" | Your Total is: $ " + TotalOfAll().ToString()).PadRight(36) + " | ");
+            System.Console.WriteLine("Thank you enjoy your movie");
+           
         }
+        
     }
 }
