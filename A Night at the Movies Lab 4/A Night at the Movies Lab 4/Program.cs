@@ -85,7 +85,7 @@ namespace A_Night_at_the_Movies_Lab_4
 
             double totalAmount = TicketOutput + foodOutput - totalDiscount;
 
-            System.Console.WriteLine("Tickets : " + TicketOutput + " Snacks : " + foodOutput + " Discounts: " + totalDiscount);
+            System.Console.WriteLine("Tickets : " + TicketOutput + " Food : " + foodOutput + " Discounts: " + totalDiscount);
 
             Cost TotalofAll = new Cost();
             TotalofAll.PrintTotalPrice();
