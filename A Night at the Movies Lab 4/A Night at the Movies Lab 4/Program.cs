@@ -33,53 +33,34 @@ namespace A_Night_at_the_Movies_Lab_4
             int TheaterCandy = int.Parse(System.Console.ReadLine());
 
             int inputeveningTicket = 0;
+            double TicketOutput = 0;
+
             if (inputeveningTicket == 'y')
             {
-                double AdultOutputEvening = 0;
-                double AdultEvening = 0;
-                AdultOutputEvening = AdultTickets * AdultEvening;
-
-                double ChildEvening = 0;
-                double ChildOutputEvening = 0;
-                ChildOutputEvening = ChildTickets * ChildEvening;
-
-                double SeniorEvening = 0;
-                double SeniorOutputEvening = 0;
-                SeniorOutputEvening = SeniorTickets * SeniorEvening;
-                double TotalEveningTickets = SeniorOutputEvening + ChildOutputEvening + AdultOutputEvening;
+                TicketOutput = AdultTickets * 10.99;
+                TicketOutput += ChildTickets * 6.99;
+                TicketOutput += SeniorTickets * 8.50;
+                
             }
             else
             {
-                double AdultMatinee = 0;
-                double AdultOutputMatinee = 0;
-                AdultOutputMatinee += AdultTickets * AdultMatinee;
-
-                double ChildMatinee = 0;
-                double ChildOutputMatinee = 0;
-                ChildOutputMatinee += ChildTickets * ChildMatinee;
-
-                double SeniorMatinee = 0;
-                double SeniorOutputMatinee = 0;
-                SeniorOutputMatinee += SeniorTickets * SeniorMatinee;
-                double TotalMatineeTickets = SeniorOutputMatinee + ChildOutputMatinee + AdultOutputMatinee;
+                TicketOutput = AdultTickets * 5.99;
+                TicketOutput += ChildTickets * 3.99;
+                TicketOutput += SeniorTickets * 4.50;                
             }
 
-           
-            double SweetPopCorn = 0;
-            double PopCornOutput = 0;
-            PopCornOutput = PopCorn * SweetPopCorn;
 
-            double HotDog = 0;
-            double HotDogOutput = 0;
-            HotDogOutput = TheaterHotDog * HotDog;
+            double smallSoda = 3.50;
+            double LargeSoda = 5.99;
+            double HotDog = 3.99;
+            double SweetPopCorn = 4.50;
+            double OneKindCandy = 1.99;
 
-            double LargeSoda = 0;
-            double LargeDrinkOutput = 0;
-            LargeDrinkOutput = LargeDrinkTheater * LargeSoda;
-
-            double smallSoda = 0;
-            double smallDrinkOutput = 0;
-            smallDrinkOutput = smallDrinkTheater * smallSoda;
+            double foodOutput = PopCorn * SweetPopCorn;
+            foodOutput += TheaterHotDog * HotDog;
+            foodOutput += LargeDrinkTheater * LargeSoda;
+            foodOutput += smallDrinkTheater * smallSoda;
+            foodOutput += TheaterCandy * OneKindCandy;
 
             int ticketAmount = AdultTickets + ChildTickets + SeniorTickets;
 
@@ -97,10 +78,14 @@ namespace A_Night_at_the_Movies_Lab_4
             {
                 discount3 = (TheaterCandy / 4) * 1.99;
             }
+
             
-            
-            Cost totalDiscount = new Cost();
-            totalDiscount.SumOfDiscounts();
+
+            double totalDiscount = discount1 + discount2 + discount3;
+
+            double totalAmount = TicketOutput + foodOutput - totalDiscount;
+
+            System.Console.WriteLine("Tickets : " + TicketOutput + " Snacks : " + foodOutput + " Discounts: " + totalDiscount);
 
             Cost TotalofAll = new Cost();
             TotalofAll.PrintTotalPrice();
