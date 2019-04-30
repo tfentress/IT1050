@@ -17,6 +17,7 @@ namespace A_Night_at_the_Movies_Lab_4
             int ChildTickets = int.Parse(System.Console.ReadLine());
 
 
+
             System.Console.WriteLine("How many popcorn?   ");
             int PopCorn = int.Parse(System.Console.ReadLine());
 
