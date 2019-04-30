@@ -6,7 +6,6 @@ namespace A_Night_at_the_Movies_Lab_4
 
         static void Main(string[] args)
         {
-
             System.Console.WriteLine("Hello. Would you like an Evening ticket?    ");
             string inputeveningTicketString = System.Console.ReadLine().ToLower();
             bool inputeveningTickets = inputeveningTicketString.Contains("y") || inputeveningTicketString.Contains("t");
@@ -18,11 +17,6 @@ namespace A_Night_at_the_Movies_Lab_4
             int ChildTickets = int.Parse(System.Console.ReadLine());
 
 
-            System.Console.WriteLine("How many small drinks?   ");
-            int smallDrinkTheater = int.Parse(System.Console.ReadLine());
-            System.Console.WriteLine(" How many large drinks?   ");
-            int LargeDrinkTheater = int.Parse(System.Console.ReadLine());
-
             System.Console.WriteLine("How many popcorn?   ");
             int PopCorn = int.Parse(System.Console.ReadLine());
 
@@ -32,10 +26,16 @@ namespace A_Night_at_the_Movies_Lab_4
             System.Console.WriteLine(" How many candies?   ");
             int TheaterCandy = int.Parse(System.Console.ReadLine());
 
+            System.Console.WriteLine("How many small drinks?   ");
+            int smallDrinkTheater = int.Parse(System.Console.ReadLine());
+            System.Console.WriteLine(" How many large drinks?   ");
+            int LargeDrinkTheater = int.Parse(System.Console.ReadLine());
+
+            
             int inputeveningTicket = 0;
             double TicketOutput = 0;
 
-            if (inputeveningTicket == 'y')
+            if (inputeveningTickets == true)
             {
                 TicketOutput = AdultTickets * 10.99;
                 TicketOutput += ChildTickets * 6.99;
@@ -64,11 +64,12 @@ namespace A_Night_at_the_Movies_Lab_4
 
             int ticketAmount = AdultTickets + ChildTickets + SeniorTickets;
 
+            double discount = 0;
             int PossibleDiscount = System.Math.Min(PopCorn, LargeDrinkTheater);
             double discount1 = System.Math.Min(PossibleDiscount, ticketAmount)* 2;
 
             double discount2 = 0;
-            if (ticketAmount >= 3 && inputeveningTicket == 'y' && PopCorn >= 1)
+            if (ticketAmount >= 3 && inputeveningTickets == true && PopCorn >= 1)
             {
                 discount2 = 4.50;
             }
@@ -79,17 +80,16 @@ namespace A_Night_at_the_Movies_Lab_4
                 discount3 = (TheaterCandy / 4) * 1.99;
             }
 
-            
-
             double totalDiscount = discount1 + discount2 + discount3;
 
             double totalAmount = TicketOutput + foodOutput - totalDiscount;
 
             System.Console.WriteLine("Tickets : " + TicketOutput + " Food : " + foodOutput + " Discounts: " + totalDiscount);
 
-            Cost TotalofAll = new Cost();
-            TotalofAll.PrintTotalPrice();
 
+            System.Console.WriteLine(("| Your Total is: $ " + totalAmount.ToString()).PadRight(36) + " | ");
+            System.Console.WriteLine("Thank you enjoy your movie");
+            
             System.Console.WriteLine("Press any key to continue...");
             System.Console.ReadLine();
         }

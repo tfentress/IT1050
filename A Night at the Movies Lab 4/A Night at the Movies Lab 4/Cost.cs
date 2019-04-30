@@ -4,21 +4,25 @@ namespace A_Night_at_the_Movies_Lab_4
     class Cost
     {
 
-        public static double TicketOutput;
-        public static double foodOutput;
-        public static double totalDiscount;
-        public static double TotalPrice;
-                
+        public double TicketOutput;
+        public double foodOutput;
+        public double totalDiscount;
+        public double TotalPrice;
+        public double snack;
+        public double discount;
+        public double Ticket;
 
+       public Cost()
+        {
+
+        }
         public double TotalOfAll()
         {
-            double totalAmount = TicketOutput + foodOutput - totalDiscount;
-            return TotalPrice;
+            return this.TotalPrice = (double)TicketOutput + (double)foodOutput - (double)totalDiscount;
+            
         }
         public void PrintTotalPrice()
         {
-            System.Console.WriteLine((" Your Total is: $ " + TotalOfAll()));
-            System.Console.WriteLine("Thank you enjoy your movie");
            
         }
         
