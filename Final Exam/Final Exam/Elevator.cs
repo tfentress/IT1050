@@ -25,7 +25,7 @@ namespace Final_Exam
         public double GetCurrentWeight()
 
         {
-            return
+            return 
             
         }
 

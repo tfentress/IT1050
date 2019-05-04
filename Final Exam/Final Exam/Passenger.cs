@@ -25,6 +25,7 @@ namespace Final_Exam
             return Weight;
         }
 
+
         }
     }
 }
