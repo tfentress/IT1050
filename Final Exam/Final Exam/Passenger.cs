@@ -18,14 +18,14 @@ namespace Final_Exam
         }            
         public string GetName()
             {
-                return Name;
+                return this.Name;
             }
         public double GetWeight()
         {
-            return Weight;
+            return this.Weight;
         }
 
-
-        }
+         
+        
     }
 }

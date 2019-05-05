@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Final_Exam
 {
@@ -23,13 +19,22 @@ namespace Final_Exam
 
         }
         public double GetCurrentWeight()
-
         {
-            return 
-            
+            double SumOfWeight = 0;
+            double Count =0;
+            for (int w = 0; w < Occupants.Length; w++)
+            {
+                Count++;
+                SumOfWeight = Occupants[w].GetWeight() + Count;
+            }
+
+            return (double)SumOfWeight;
         }
 
-
+        public bool IsOverMaxCapacity()
+        {
+            return this.GetCurrentWeight() > this.MaxWeight;
+        }
 
     }
 
