@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AF73D0A7-0339-4CC5-9C30-43F59D2A2AC4}</ProjectGuid>
+    <ProjectGuid>{AE9EE7CD-60B2-4E25-8A50-B975DF7AB918}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Almost_Chess_Lab5</RootNamespace>
-    <AssemblyName>Almost Chess Lab5</AssemblyName>
+    <RootNamespace>Almost_Chess_Lab_5</RootNamespace>
+    <AssemblyName>Almost Chess Lab 5</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

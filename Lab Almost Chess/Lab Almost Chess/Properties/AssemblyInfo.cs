@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Almost Chess Lab5")]
+[assembly: AssemblyTitle("Lab Almost Chess")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("Almost Chess Lab5")]
+[assembly: AssemblyProduct("Lab Almost Chess")]
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("af73d0a7-0339-4cc5-9c30-43f59d2a2ac4")]
+[assembly: Guid("a657022c-317e-4ac8-b622-1eb0e4500888")]
 
 // Version information for an assembly consists of the following four values:
 //

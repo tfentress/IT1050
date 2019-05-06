@@ -21,9 +21,10 @@ namespace Final_Exam
         public double GetCurrentWeight()
         {
             double SumOfWeight = 0;
-            for (int w = 0; w < Occupants.Length; w++)
+            double Count = 0;
+            for (int w = 0; w < Count; w++)
             {
-                SumOfWeight = Occupants[w].GetWeight() + SumOfWeight;
+                SumOfWeight = Occupants[w].GetWeight() + Count++;
             }
 
             return (double)SumOfWeight;
