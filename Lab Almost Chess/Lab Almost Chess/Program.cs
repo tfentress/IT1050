@@ -109,6 +109,7 @@ namespace Lab_Almost_Chess
                     Environment.Exit(0);
                     return GoForward = false;                  
                     }
+
                 }
 
                 designBoard();
