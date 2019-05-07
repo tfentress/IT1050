@@ -3,17 +3,18 @@
 namespace Lab_Almost_Chess
 {
     class Program
-    
+
     {
-      
+
         static void Main(string[] args)
         {
+
             string[][] grid = new string[8][];
             bool GoForward = true;
 
             void designBoard()
             {
-               
+
                 for (int i = 0; i < 8; i++)
                 {
                     grid[i] = new string[8];
@@ -31,10 +32,10 @@ namespace Lab_Almost_Chess
                         grid[i][j] = " ";
                     }
                 }
-
                 PrintBoard();
-                PromptUser();
 
+                PromptUser();
+              }
                 void PrintBoard()
 
                 {
@@ -54,12 +55,13 @@ namespace Lab_Almost_Chess
                         Console.WriteLine();
 
                     }
-                    System.Console.WriteLine(" <-------------------------->");
+                    Console.WriteLine(" <-------------------------->");
                 }
+
                 void PromptUser()
                 {
                     Console.Write("Enter  target X coordinate between 0 and 7 : ");
-                    int targetX = int.Parse(System.Console.ReadLine());
+                    int targetX = int.Parse(Console.ReadLine());
 
                     while (targetX < 0 || targetX > 7)
                     {
@@ -69,7 +71,7 @@ namespace Lab_Almost_Chess
                     }
 
                     Console.Write("Enter a target Y coordinate between 0 and 7 : ");
-                    int targetY = int.Parse(System.Console.ReadLine());
+                    int targetY = int.Parse(Console.ReadLine());
 
                     while (targetY < 0 || targetY > 7)
                     {
@@ -79,27 +81,33 @@ namespace Lab_Almost_Chess
                     }
 
                     Console.Write("Enter a destination X coordinate between 0 and 7 : ");
-                    int destinationX = int.Parse(System.Console.ReadLine());
+                    int destinationX = int.Parse(Console.ReadLine());
                     Console.Write("Enter a destination Y coordinate between 0 and 7 : ");
-                    int destinationY = int.Parse(System.Console.ReadLine());
+                    int destinationY = int.Parse(Console.ReadLine());
 
                     grid[targetX][targetY] = " ";
                     grid[destinationX][destinationY] = "X";
 
                     PrintBoard();
                     moveForward();
+
                 }
-               
+
                 bool moveForward()
                 {
                     Console.Write("Would you like to continue? (y/n) : ");
+
+
                     if (Console.ReadLine().ToLower().Contains("y"))
                     {
                         return GoForward = true;
                     }
                     else
                     {
-                        return GoForward = false;
+                    Console.WriteLine("Press any key to continue...");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                    return GoForward = false;                  
                     }
                 }
 
@@ -110,8 +118,10 @@ namespace Lab_Almost_Chess
                     PrintBoard();
                     PromptUser();
                 }
+
                 System.Threading.Thread.Sleep(50000);
             }
-                       
-        } }
+
+        }
+   
 }
